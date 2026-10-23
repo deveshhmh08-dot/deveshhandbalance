@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Zero to Handstand — The Devesh Method</title>
+<meta name="description" content="Your first freestanding handstand, step by step, from day one. The Devesh Method.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0c0c0d;--bg2:#141416;--line:#2a2a2d;--text:#f4f4f2;--muted:#a3a3a0;--accent:#d4af37;--gold:#d4af37;--gold2:#e8c866;
+--display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.bar{background:var(--gold);color:#0c0c0d;text-align:center;font-weight:600;font-size:.85rem;padding:10px 16px}
+.wrap{max-width:780px;margin:0 auto;padding-inline:22px}
+section{padding-block:80px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:22px}
+section:last-of-type{border-bottom:0}
+.label{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.95;margin:0;font-weight:700;text-wrap:balance}
+h1{font-size:clamp(2.2rem,10.4vw,5.6rem);letter-spacing:.005em;white-space:nowrap}
+h2{font-size:clamp(2.4rem,8vw,4rem)}
+h3{font-size:1.7rem;color:var(--gold)}
+h1 span{display:inline;color:var(--gold)}
+p{margin:0;max-width:62ch}
+.lede{font-size:1.18rem}
+.muted{color:var(--muted)}
+.without{display:flex;flex-direction:column;gap:6px;font-size:1.1rem}
+.without span::before{content:"— ";color:var(--muted)}
+.hero{padding-top:64px;align-items:center;text-align:center}
+.hero h1{line-height:.9}
+.hero .label{font-size:.92rem;letter-spacing:.14em;color:var(--accent);max-width:34ch;line-height:1.5}
+.hero .lede{font-size:1.3rem;color:var(--text);max-width:34ch}
+.hero .without{align-items:center}
+.hero .without span::before{content:none}
+.hero .cta{align-items:center}
+.hero .media{width:100%}
+.media{border:1px dashed #3b3b40;border-radius:14px;background:repeating-linear-gradient(135deg,#17171a 0 14px,#1b1b1e 14px 28px);color:var(--muted);display:grid;place-items:center;text-align:center;padding:24px;font-size:.82rem;overflow:hidden}
+.media img{width:100%;height:100%;object-fit:cover}
+.tall{aspect-ratio:4/5}.wide{aspect-ratio:16/9}.short{min-height:140px}
+.cta{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.btn{display:inline-flex;background:var(--gold);color:#0c0c0d;text-decoration:none;font-weight:600;padding:16px 30px;border-radius:999px;transition:transform .25s,background .25s}
+.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.under{font-size:.84rem;color:var(--muted)}
+.testi{border-left:2px solid #55555a;padding:2px 0 2px 18px;display:flex;flex-direction:column;gap:12px}
+.ladder{list-style:none;margin:0;padding:0;border-left:1px solid #6b5a22}
+.ladder li{padding:16px 0 16px 24px;position:relative;display:flex;flex-direction:column;gap:4px}
+.ladder li::before{content:"";position:absolute;left:-5px;top:25px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.ladder .n{font-size:.72rem;letter-spacing:.16em;color:var(--muted)}
+.ladder b{font-family:var(--display);font-size:1.6rem;text-transform:uppercase;font-weight:700}
+.ladder span:last-child{color:var(--muted);font-size:.95rem}
+.benefits{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+@media(max-width:620px){.benefits{grid-template-columns:1fr}}
+.benefits li{padding-left:24px;position:relative}
+.benefits li::before{content:"";position:absolute;left:0;top:.85em;width:12px;height:2px;background:var(--gold)}
+.bonus{background:var(--bg2);border:1px solid #6b5a22;border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:16px}
+.meter{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.meter i{display:block;height:100%;width:38%;background:var(--gold)}
+.price{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.price s{font-family:var(--display);font-size:2rem;color:var(--muted)}
+.price strong{color:var(--gold);font-family:var(--display);font-size:clamp(3.2rem,11vw,5rem);line-height:1}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--gold)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;color:var(--muted)}
+.ph{color:var(--accent);font-size:.9em;border:1px dashed #3b3b40;border-radius:8px;padding:10px 14px}
+footer{text-align:center;padding-block:36px 56px;color:var(--muted);font-size:.85rem}
+.gallery figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.gallery figcaption{font-family:var(--display);text-transform:uppercase;font-size:1.35rem;font-weight:600;line-height:1.1;text-align:center;color:var(--text)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery .media{aspect-ratio:4/5;padding:12px}
+@media(max-width:640px){.gallery{grid-template-columns:1fr 1fr}}
+.vids{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:min(1040px,calc(100vw - 44px));align-self:center}
+.vids figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.vids video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border-radius:14px;display:block}
+.vids figcaption{font-size:.84rem;color:var(--muted)}
+@media(max-width:900px){.vids{grid-template-columns:repeat(3,1fr)}}
+.swipe{display:none;font-size:.8rem;color:var(--muted)}
+@media(max-width:640px){.vids{width:auto;align-self:stretch;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-22px;padding-inline:22px;scroll-padding-inline:22px;-webkit-overflow-scrolling:touch}.vids figure{flex:0 0 74%;scroll-snap-align:start}.swipe{display:block}}
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(12,12,13,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,175,55,.4)}
+.topnav .in{max-width:1040px;margin:0 auto;padding:0 22px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.55rem;text-transform:none;text-decoration:none;white-space:nowrap;letter-spacing:.03em}
+.brand span{color:var(--gold)}
+.links{display:flex;align-items:center;gap:clamp(20px,3.4vw,46px);font-size:.97rem}
+.links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--gold)}
+.links a.btn{padding:9px 20px;font-size:.88rem;color:#0c0c0d}
+.menu{display:none;background:none;border:0;color:var(--text);padding:8px;cursor:pointer}
+@media(max-width:940px){.menu{display:block}.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(12,12,13,.98);padding:6px 22px 22px;border-bottom:1px solid var(--line)}.links.open{display:flex}.links a{padding:15px 0;font-size:1.05rem;border-bottom:1px solid var(--line);color:var(--text)}.links a.btn{margin-top:16px;justify-content:center;border:0;color:#0c0c0d}}
+html,body{overflow-x:clip}
+.hero{position:relative;isolation:isolate}
+.herobg{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;overflow:hidden;pointer-events:none}
+.herobg video{display:none;width:100%;height:100%;object-fit:cover}
+.herobg.on video{display:block}
+.herobg .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,13,.62) 0%,rgba(12,12,13,.74) 65%,#0c0c0d 100%)}
+.bgbtn{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:5;background:var(--text);color:#0c0c0d;border:0;border-radius:999px;padding:9px 18px;font:600 .8rem var(--body);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.5);white-space:nowrap}
+section{align-items:center;text-align:center}
+section>.media,.gallery,.ladder,.benefits,.faq,.bonus{width:100%}
+.cta{align-items:center}
+.price{justify-content:center}
+.ladder{border-left:0}
+.ladder li{align-items:center;padding:20px 0}
+.ladder li+li{border-top:1px solid #3a3320}
+.ladder li::before{position:static;display:block;margin:0 auto 10px}
+.benefits li{padding-left:0}
+.benefits li::before{position:static;display:block;margin:0 auto 10px}
+.faq summary{justify-content:center;text-align:center}
+.faq p{margin-inline:auto}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:34px 26px;width:min(960px,calc(100vw - 44px));align-self:center}
+.pair{display:flex;flex-direction:column;gap:12px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gold);border:1px solid var(--gold);border-radius:14px;overflow:hidden}
+.duo figure{margin:0;display:flex;flex-direction:column;background:var(--bg)}
+.duo .media{aspect-ratio:3/4;padding:8px;font-size:.72rem;border:0;border-radius:0;width:100%;height:auto}
+.duo figcaption{padding:11px 0;background:var(--bg2);text-align:center;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+@media(max-width:640px){.ba{grid-template-columns:1fr;width:auto;align-self:stretch}}
+footer .box{max-width:780px;margin:0 auto;padding:76px 22px 28px;display:flex;flex-direction:column;align-items:center;gap:22px;border-top:1px solid var(--line)}
+footer .box p{font-size:1rem}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.pill{display:inline-flex;align-items:center;padding:14px 26px;border:1px solid var(--gold);border-radius:999px;color:var(--text);text-decoration:none;font-weight:600;font-size:.95rem;transition:background .25s,color .25s,transform .25s}
+.pill:hover{background:var(--gold);color:#0c0c0d;transform:translateY(-2px)}
+.pill.wa{background:var(--gold);color:#0c0c0d}
+.pill.wa:hover{background:var(--gold2)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<script>
+/* ===== EDIT HERE ===== */
+const CONFIG = {
+  payhipUrl: "https://payhip.com/order?link=7JFkp&pricing_plan=N9G84EV5GV",   // ← your Payhip page: every course button uses this
+  instagramUrl: "https://www.instagram.com/devesh.handbalance/",
+  instagramHandle: "@devesh.handbalance",
+  whatsappUrl: "https://wa.me/919828335432",        // ← WhatsApp link: https://wa.me/ + your number with country code, no + or spaces
+  email: "devesh.hmh08@gmail.com",                         // ← your email address
+  youtubeUrl: "https://www.youtube.com/@devesh.handbalance",  // ← optional: leave "" to hide
+  telegramUrl: "https://t.me/YOUR_USERNAME",        // ← optional: leave "" to hide
+  heroBgVideo: "videos/hero-bg.mp4"   // ← background video for the very top of the page: a file path or URL to an .mp4 (leave empty for none)
+};
+</script>
+
+<div class="bar">Launch bonus: the first 10 students get a private 1:1 session with Devesh</div>
+
+<span id="top"></span>
+<header class="topnav">
+  <div class="in">
+    <a class="brand" href="#top" aria-label="devesh.handbalance, back to top">devesh<span>.</span>handbalance</a>
+    <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h18M4 18h18"/></svg></button>
+    <nav class="links" id="navlinks" aria-label="Main">
+      <a href="#story">About me</a>
+      <a href="#course">The course</a>
+      <a href="#testimonials">Students</a>
+      <a href="#coaching">Coaching</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" data-payhip>Get the course</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero reveal">
+    <div class="herobg" id="heroBgWrap" aria-hidden="true"><video id="heroBg" muted loop playsinline autoplay preload="auto"></video><div class="shade"></div></div>
+    <div class="label">What if a handstand isn’t about kicking harder at all?</div>
+    <h1>Zero to <span>Handstand</span></h1>
+    <p class="lede">The Devesh Method. Your first freestanding handstand, step by step, from day one.</p>
+    <div class="without">
+      <span>Without kicking up and hoping for the best</span>
+      <span>Without the fear of falling</span>
+      <span>Without wrecking your wrists</span>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#offer">I want to start</a>
+      <span class="under">Instant access · Your own pace · PayPal &amp; cards</span>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="lede">By the end of this short page, you’ll know exactly why you’re still stuck at the wall, and the right order that takes you to a freestanding handstand, safely and at your own pace.</p>
+    <div class="media wide" data-img="hero" style="padding:0;aspect-ratio:16/9;width:100%;background:#000"><video id="mainVisual" controls playsinline preload="metadata" poster="data:image/jpeg;base64,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" src="videos/intro-clip-music.mp4#t=0.1" aria-label="Handstand coaching video" style="width:100%;height:100%;object-fit:cover;display:block"></video></div>
+    
+  </section>
+
+  <section id="story" class="reveal">
+    <div class="label">My story</div>
+    <h2>I still remember the first time I saw it</h2>
+    <p>A guy on YouTube, holding a one-arm handstand. It hit me so hard that I knew right away: this is what I want to do.</p>
+    <p>I was born in Hanumangarh, Rajasthan, India, with my triplet brothers and one elder brother. From a young age I loved to move: martial arts, Judo, and I always wanted to learn the difficult things.</p>
+    <p>In college I started dancing, and that turned into breakdancing. Every day, at the same time, alone in the park. Teaching myself windmills, flares and headspins. Falling, getting up, falling again.</p>
+    <h3>But it didn’t go the way I thought</h3>
+    <p>My handstand was still weak. I trained alone, with no coach and no plan. Kicking up, falling, falling again. Years of trial and error.</p>
+    <p>Over the past seven years, I’ve built a solid foundation in the handstand and moved on to more advanced skills like the press to handstand and the one-arm handstand.</p>
+    <p>It has been a great journey, and it’s still going.</p>
+    <p>I’m really happy to share what I’ve learned through all these years of training and coaching people around the world.</p>
+  </section>
+
+  <section id="course" class="reveal">
+    <div class="label">Proud to introduce</div>
+    <h2>Zero to Handstand<br><span class="muted">The Devesh Method</span></h2>
+    <p class="lede">Step by step. Safe for your body. At your own pace. No weeks, no deadlines: you move on when your body is ready.</p>
+    <div class="media wide" style="padding:0;border:0"><img src="images/product.jpg" alt="Devesh in a split handstand on the green mat"></div>
+    <div class="gallery" aria-label="Course photos">
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-1.jpg" alt="Shoulder mobility stretch on a box"></div><figcaption>Proper preparation</figcaption></figure>
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-2.jpg" alt="Wall handstand drill"></div><figcaption>Wall drills</figcaption></figure>
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-3.jpg" alt="Pike handstand with feet on a bench"></div><figcaption>Alignment</figcaption></figure>
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-4.jpg" alt="Chest-to-wall handstand"></div><figcaption>Learn how to bail</figcaption></figure>
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-5.jpg" alt="Seated shoulder and core drill"></div><figcaption>Work on strengthening</figcaption></figure>
+      <figure><div class="media" style="padding:0;border:0"><img src="images/photo-6.jpg" alt="Kneeling overhead arm drill"></div><figcaption>Build awareness</figcaption></figure>
+    </div>
+    <ol class="ladder" aria-label="Course stages">
+      <li><span class="n">STAGE 01</span><b>Strong foundations</b><span>Full-body mobilisation and preparation exercises for your wrists, shoulders and hips.</span></li>
+      <li><span class="n">STAGE 02</span><b>Alignment and awareness</b><span>Learning to recognise where your body is positioned without relying entirely on visual feedback.</span></li>
+      <li><span class="n">STAGE 03</span><b>The straight line</b><span>Developing awareness of your rib cage and pelvic position to reduce the banana shape and achieve a more aligned handstand.</span></li>
+      <li><span class="n">STAGE 04</span><b>Balance</b><span>Learn how to use your hands to balance, rather than relying on your legs or shoulders, for more optimal balance.</span></li>
+      <li><span class="n">STAGE 05</span><b>Safe entries &amp; exits</b><span>Learn how to bail to overcome the fear of falling.</span></li>
+      <li><span class="n">STAGE 06</span><b>Freestanding</b><span>Learning correct leg coordination and weight transfer during the kick-ups.</span></li>
+    </ol>
+    
+  </section>
+
+  <section id="testimonials" class="reveal">
+    <div class="label">Student stories</div>
+    <h2>Hear it from my students</h2>
+    <p class="muted">Real students, in their own words, talking about their handstand progress.</p>
+    <div class="vids">
+      <figure><video controls playsinline preload="metadata" src="videos/testimonial-1.mp4#t=0.1" aria-label="Video testimonial from a student"></video><figcaption>[ Student name — add a short line about her journey ]</figcaption></figure>
+      <figure><video controls playsinline preload="metadata" src="videos/testimonial-2.mp4#t=0.1" aria-label="Video testimonial from a student"></video><figcaption>[ Student name — add a short line about her journey ]</figcaption></figure>
+      <figure><video controls playsinline preload="metadata" src="videos/testimonial-3.mp4#t=0.1" aria-label="Video testimonial from a student"></video><figcaption>[ Student name — add a short line about her journey ]</figcaption></figure>
+      <figure><video controls playsinline preload="metadata" src="videos/testimonial-4.mp4#t=0.1" aria-label="Video testimonial from a student"></video><figcaption>[ Student name — add a short line about her journey ]</figcaption></figure>
+      <figure><video controls playsinline preload="metadata" src="videos/testimonial-5.mp4#t=0.1" aria-label="Video testimonial from a student"></video><figcaption>[ Student name — add a short line about her journey ]</figcaption></figure>
+    </div>
+    <span class="swipe">Swipe to see more →</span>
+  </section>
+
+  <section id="results" class="reveal">
+    <div class="label">Client progress</div>
+    <h2>Before and after</h2>
+    <p class="muted">Real students, real progress.</p>
+    <div class="ba">
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/hiral-before.jpg" alt="Hiral before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/hiral-after.jpg" alt="Hiral after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Hiral</b> · 3+ years of training</p></div>
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/garima-before.jpg" alt="Garima before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/garima-after.jpg" alt="Garima after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Garima</b> · 3.5+ years of training</p></div>
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/abdullah-before.jpg" alt="Abdullah before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/abdullah-after.jpg" alt="Abdullah after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Abdullah</b> · 6 months of training</p></div>
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/sannutha-before.jpg" alt="Sannutha before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/sannutha-after.jpg" alt="Sannutha after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Sannutha</b> · 3+ years of training</p></div>
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/myra-before.jpg" alt="Myra before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/myra-after.jpg" alt="Myra after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Myra</b> · 3+ years of training</p></div>
+      <div class="pair"><div class="duo"><figure><div class="media" style="padding:0"><img src="images/ba/krutika-before.jpg" alt="Krutika before"></div><figcaption>Before</figcaption></figure><figure><div class="media" style="padding:0"><img src="images/ba/krutika-after.jpg" alt="Krutika after"></div><figcaption>After</figcaption></figure></div><p class="under"><b style="color:var(--text);font-weight:600">Krutika</b> · 5 months of training</p></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="bonus">
+      <div class="label">Ultra bonus · first 10 students only</div>
+      <h2>A private 1:1 session with Devesh</h2>
+      <p>Bring your questions, show him your handstand, ask about your alignment, your fear of falling, or anything else. Devesh will see exactly where you are and tell you what to focus on to progress faster.</p>
+      
+      
+    </div>
+  </section>
+
+  <section id="offer" class="reveal">
+    <div class="label">The offer</div>
+    <h2>But that’s not the price you’ll pay</h2>
+    <p>I want as many people as possible to learn handstands the right way, without the injuries and frustration I went through. I remember myself alone in the park, falling again and again, with no one to show me the way. So for the launch only:</p>
+    <div class="price"><s>$200</s><strong>$129</strong></div>
+    <p class="muted">Launch price valid until 1 December 2026.</p>
+    <div class="cta">
+      <a class="btn" data-payhip>Yes, I want my first handstand →</a>
+      <span class="under">Secure payment · PayPal &amp; credit cards · Instant access</span>
+    </div>
+    
+  </section>
+
+  <section id="coaching" class="reveal">
+    <div class="label">Private coaching</div>
+    <h2>Train with me, one-on-one</h2>
+    <p class="lede">Want personal guidance? I coach handstands online, one-on-one, with feedback on your own training, your technique and alignment, and the progressions that fit you.</p>
+    <div class="cta">
+      <a class="btn" id="coachBtn" target="_blank" rel="noopener">Message me on Instagram →</a>
+      <span class="under">Tell me where you are with your handstand and what you’d like to work on.</span>
+    </div>
+  </section>
+
+  <section id="faq" class="reveal">
+    <div class="label">If you’re thinking…</div>
+    <div class="faq">
+      <details><summary>“I’ve never done a handstand. Is this for me?”</summary><p>Yes! It’s built exactly for you. The course starts from zero. It begins with proper preparation and gives you step-by-step guidance throughout the journey.</p></details>
+      <details><summary>“I’ve tried drills from YouTube and Instagram. Why is this different?”</summary><p>Random drills aren’t a method. Here every drill builds the next one, in an exact order, and you always know the next stage.</p></details>
+      <details><summary>“I’m afraid of falling and getting hurt.”</summary><p>One of the things you will learn is how to come down safely. Once you know how to get out, the fear disappears and then you can focus on the details. If you have an existing injury, check with a doctor first.</p></details>
+      <details><summary>“I don’t have an hour a day.”</summary><p>You don’t need one. 10 to 20 minutes most days is enough. Short, consistent practice beats one long session a week.</p></details>
+      <details><summary>“Am I too old for this?”</summary><p>My oldest student is 60 years old. Strength and balance can be built at any age when you progress stage by stage.</p></details>
+      <details><summary>“What if I need personal help?”</summary><p>The first 10 students get a 1:1 session with Devesh. For closer guidance there’s also personal online coaching.</p></details>
+      <details><summary>“Is it possible to learn handstands online?”</summary><p>Yes! Online is better than offline, because you can train consistently and stay focused, which is far better than training offline once a week. The course is made to be followed online, at your own pace, wherever you train. Each stage builds on the one before it, so you always know what to practise next. And if you want personal feedback on your own handstand, you can also work with me one-on-one online.</p></details>
+    </div>
+  </section>
+
+  <section class="reveal">
+    
+    <h2>Ready to finally get on your hands?</h2>
+    <p class="lede">A month from now you can still be at the wall, kicking up and hoping. Or you can be on a clear path, with strong wrists, no fear, close to your first freestanding seconds.</p>
+    <div class="price"><strong>$129</strong><span class="muted">until 1 December 2026</span></div>
+    <div class="cta">
+      <a class="btn" data-payhip>Yes, teach me the handstand →</a>
+      <span class="under">Questions? Message <a id="ig" target="_blank" rel="noopener"></a> on Instagram. I answer every message personally.</span>
+    </div>
+  </section>
+</div>
+
+<footer id="contact"><div class="box">
+  <div class="label">Contact</div>
+  <h2>Let’s talk handstands</h2>
+  <p class="muted">Questions about the course or private coaching? Message me on whichever you prefer.</p>
+  <div class="contact-links">
+    <a class="pill wa" id="wa" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="pill" id="ig2" target="_blank" rel="noopener"></a>
+    <a class="pill" id="em">Email</a>
+    <a class="pill" id="yt" target="_blank" rel="noopener">YouTube</a>
+  </div>
+  <div class="under" style="margin-top:18px">Zero to Handstand · The Devesh Method · Bangkok, Thailand</div>
+</div></footer>
+
+<script>
+(()=>{const b=document.getElementById("menuBtn"),l=document.getElementById("navlinks");
+const set=o=>{l.classList.toggle("open",o);b.setAttribute("aria-expanded",o);};
+b.addEventListener("click",()=>set(!l.classList.contains("open")));
+l.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>set(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")set(false);});
+const cb=document.getElementById("coachBtn");cb.href=CONFIG.instagramUrl;
+const i2=document.getElementById("ig2");i2.href=CONFIG.instagramUrl;i2.textContent="Instagram "+CONFIG.instagramHandle;})();
+</script>
+<script>
+(()=>{const wrap=document.getElementById("heroBgWrap"),v=document.getElementById("heroBg");
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const load=src=>{v.src=src;wrap.classList.add("on");if(still){v.removeAttribute("autoplay");v.pause();}else{v.play().catch(()=>{});}};
+if(CONFIG.heroBgVideo)load(CONFIG.heroBgVideo);
+(async()=>{try{const u=await claude.use("user");if(!u||!u.isOwner())return;
+const hero=document.querySelector(".hero"),inp=document.createElement("input");inp.type="file";inp.accept="video/*";inp.hidden=true;document.body.appendChild(inp);
+const b=document.createElement("button");b.type="button";b.className="bgbtn";b.textContent="+ Add background video (preview)";hero.appendChild(b);
+b.onclick=()=>{inp.value="";inp.click();};
+inp.onchange=()=>{const f=inp.files[0];if(!f)return;load(URL.createObjectURL(f));b.textContent="Change background video (preview, this device only)";};
+}catch(e){}})();})();
+</script>
+<script>
+(()=>{const m={wa:CONFIG.whatsappUrl,em:CONFIG.email?"mailto:"+CONFIG.email:"",yt:CONFIG.youtubeUrl,tg:CONFIG.telegramUrl};
+for(const k in m){const a=document.getElementById(k);if(!a)continue;if(m[k])a.href=m[k];else a.remove();}})();
+</script>
+<script>
+document.querySelectorAll("[data-payhip]").forEach(a => { a.href = CONFIG.payhipUrl; a.target = "_blank"; a.rel = "noopener"; });
+const ig = document.getElementById("ig"); ig.href = CONFIG.instagramUrl; ig.textContent = CONFIG.instagramHandle;
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .08 }) : null;
+document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+<script>
+if(matchMedia("(prefers-reduced-motion: reduce)").matches){const v=document.getElementById("mainVisual");v.removeAttribute("autoplay");v.pause();v.controls=true;}
+</script>
+<script>
+/* Owner-only photo preview picker */
+(async()=>{try{
+const user=await claude.use("user");if(!user||!user.isOwner())return;
+const slots=[...document.querySelectorAll("[data-img], .media")];
+const K=i=>"ds-photo-"+i;
+const show=(el,src)=>{el.innerHTML="";const im=new Image();im.src=src;im.alt="";im.style.cssText="width:100%;display:block;object-fit:cover;"+(el.classList.contains("short")?"height:auto":"height:100%");el.appendChild(im);el.style.padding="0";};
+const inp=document.createElement("input");inp.type="file";inp.accept="image/*";inp.hidden=true;document.body.appendChild(inp);
+let cur=null;
+slots.forEach((el,i)=>{
+try{const s=localStorage.getItem(K(i));if(s)show(el,s);else if(!el.querySelector("img,video"))el.insertAdjacentHTML("beforeend",'<small style="display:block;margin-top:.6rem;font-weight:600;color:#f4f4f2">+ Tap to add your photo</small>');}catch(e){}
+el.style.cursor="pointer";el.tabIndex=0;el.setAttribute("role","button");el.title="Tap to add or change photo";
+const open=()=>{cur=i;inp.value="";inp.click();};
+el.addEventListener("click",open);
+el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+});
+inp.addEventListener("change",async()=>{const f=inp.files[0];if(!f||cur===null)return;
+const bmp=await createImageBitmap(f);const sc=Math.min(1,1400/Math.max(bmp.width,bmp.height));
+const c=document.createElement("canvas");c.width=Math.round(bmp.width*sc);c.height=Math.round(bmp.height*sc);
+c.getContext("2d").drawImage(bmp,0,0,c.width,c.height);
+const url=c.toDataURL("image/jpeg",.82);show(slots[cur],url);
+try{localStorage.setItem(K(cur),url);}catch(e){}});
+const b=document.createElement("div");
+b.style.cssText="position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:60;background:#f4f4f2;color:#0c0c0d;border-radius:14px;padding:12px 14px;font:500 13px/1.4 Inter,system-ui,sans-serif;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 8px 30px rgba(0,0,0,.5)";
+b.innerHTML='<span>Owner preview: tap any photo box to try your photo. It is saved on this device only. Send me the photos in chat to publish them for everyone.</span><button type="button" aria-label="Dismiss" style="font-size:20px;line-height:1;padding:4px 8px">×</button>';
+b.querySelector("button").onclick=()=>b.remove();document.body.appendChild(b);
+}catch(e){}})();
+</script>
+</body>
+</html>
